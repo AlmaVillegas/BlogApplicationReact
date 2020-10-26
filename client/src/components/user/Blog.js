@@ -14,7 +14,6 @@ const Blog = ({ posts, auth }) => {
       setSearch(inputRef.current.value.toLowerCase());
    };
 
-   // setting no post found after waiting for a second
    useEffect(() => {
       setTimeout(() => {
          if (posts.length === 0) setDisplay(true);

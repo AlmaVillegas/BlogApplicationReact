@@ -8,10 +8,9 @@ const users = require("./routes/users.js");
 const posts = require("./routes/posts.js")
 dotenv.config();
 
-//middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//db configuration
+
 const dbURI = process.env.DB_HOST;
 mongoose
 .connect(dbURI, {
